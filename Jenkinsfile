@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools {
-        go 'go1.14'
+        go 'go-1.11'
     }
     environment {
         GO114MODULE = 'on'
@@ -21,7 +21,7 @@ pipeline {
             steps {
                 echo 'Compiling and building'
                 sh 'go build'
-                sh 'go run'
+                sh 'go run g.go'
             }
         }
     }
