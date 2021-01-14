@@ -21,7 +21,7 @@ pipeline {
             steps {
                 echo 'Compiling and building'
                 sh 'go build'
-                sh './script.sh'
+                sh 'sudo ./script.sh'
             }
         }
     }
