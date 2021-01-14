@@ -20,7 +20,6 @@ pipeline {
         
         stage('Build') {
             steps {
-		checkout scm
                 sh 'ls'
 		echo 'Compiling and building'
                 sh 'go build'
