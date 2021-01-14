@@ -1,11 +1,8 @@
 node {
-	docker.image('golang:1.14').Run(){
-		sh 'echo here'
-
-	}
-
-
-
-
-
+    /* Requires the Docker Pipeline plugin to be installed */
+    docker.image('node:14-alpine').inside {
+        stage('Test') {
+            sh 'node --version'
+        }
+    }
 }
