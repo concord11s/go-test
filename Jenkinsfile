@@ -19,7 +19,9 @@ pipeline {
         
         stage('Build') {
             steps {
-                echo 'Compiling and building'
+		checkout scm
+                sh 'ls'
+		echo 'Compiling and building'
                 sh 'go build'
 		sh 'ls'
                 sh './script.sh'
