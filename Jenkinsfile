@@ -1,7 +1,8 @@
 pipeline {
-    agent any
-    tools {
-        go 'go-1.11'
+    agent {
+        docker {
+            image 'go:1.14'       
+        }
     }
     environment {
         GO114MODULE = 'on'
